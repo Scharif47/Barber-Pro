@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass\\global.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;;AAGF;EACE","file":"main.07544d9b.css","sourceRoot":"..\\src","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nheader {\r\n  background: red;\r\n}"]}
