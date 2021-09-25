@@ -1,11 +1,80 @@
+:root {
+  font-size: 62.5%;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 5.2rem;
+}
+
+h2 {
+  font-family: "Bonheur Royale", cursive;
+  font-weight: 700;
+  font-size: 4.5rem;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
 header {
-  background: red;
+  width: 100%;
+  height: 100vh;
+  padding-top: 8rem;
+  text-align: center;
+  color: #ebe7e7;
+  background: linear-gradient(315deg, rgba(0, 0, 0, 0.692), rgba(71, 58, 58, 0.2)), url(/header.a03d530b.jpg) center;
+  background-image: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+header > h1 {
+  margin-bottom: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+main {
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+main .features .feature {
+  width: 25rem;
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  background-color: whitesmoke;
+  box-shadow: 0.5rem 0.6rem 0.5rem rgba(0, 0, 0, 0.6);
+  border-radius: 1.5rem;
+}
+main .features .feature > h3 {
+  margin-bottom: 1rem;
+  text-shadow: 0.6rem 0.6rem 0.8rem rgba(0, 0, 0, 0.6);
+}
+main .features .feature > p {
+  line-height: 2.2rem;
+}
+main .features .feature__experience {
+  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=/main.07544d9b.css.map */
