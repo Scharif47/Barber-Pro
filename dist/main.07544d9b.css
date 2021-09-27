@@ -31,6 +31,12 @@ h3 {
   font-size: 2.5rem;
 }
 
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
 p {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -75,6 +81,47 @@ main .features .feature > p {
 }
 main .features .feature__experience {
   margin-bottom: 3rem;
+}
+main .offers {
+  margin-top: 5rem;
+  background-color: whitesmoke;
+  width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  box-shadow: 0.6rem 0.4rem 0.7rem rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+}
+main .offers > article:not(:last-child) {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+}
+main .team {
+  margin-top: 5rem;
+  width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .team .person {
+  background-color: whitesmoke;
+  box-shadow: 0.6rem 0.6rem 0.8rem rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+}
+main .team .person img {
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+main .team .person > figcaption {
+  padding: 1rem;
+}
+main .team .person > figcaption > h4 {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+main .team .person:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=/main.07544d9b.css.map */
