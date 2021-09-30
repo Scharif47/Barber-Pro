@@ -66,6 +66,12 @@ main {
       padding-bottom: 1rem;
       border-bottom: 1px solid black;
     }
+
+    & > article {
+      & > h4 {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 
   .team {
@@ -94,11 +100,188 @@ main {
         }
 
         & > p {
+          line-height: 2.2rem;
         }
       }
       &:not(:last-child) {
         margin-bottom: 2rem;
       }
     }
+  }
+
+  .review {
+    margin-top: variables.$marginSectionSmall;
+    width: variables.$widthCard;
+    height: 35rem;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & img {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 90%;
+      margin-right: 1rem;
+    }
+
+    & article {
+      background-color: variables.$backgroundColorCard;
+      width: 22rem;
+      padding-top: 1rem;
+      margin-right: 5rem;
+      transition: 0.4s;
+      border: 2px solid black;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    &__date {
+      margin: 0.8rem;
+    }
+
+    &__info {
+      width: 22rem;
+    }
+
+    .navigation {
+      position: absolute;
+      bottom: 0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+
+      &__bar {
+        width: 50px;
+        height: 10px;
+        border: 1px solid black;
+        margin: 0.3rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+    }
+
+    input[name="slide"] {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 22rem;
+      height: 100%;
+      display: flex;
+    }
+    #slide-1:checked ~ .slide-1 {
+      margin-left: 0;
+    }
+    #slide-2:checked ~ .slide-1 {
+      margin-left: -122%;
+    }
+    #slide-3:checked ~ .slide-1 {
+      margin-left: -244%;
+    }
+  }
+
+  .contact {
+    margin-top: variables.$marginSectionSmall;
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: variables.$widthCard;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: variables.$backgroundColorCard;
+      padding: 1rem 1rem 2rem 1rem;
+      box-shadow: variables.$boxShadowSmall;
+
+      & > label {
+        font-size: 1.5rem;
+      }
+
+      & > input {
+        margin-bottom: 1rem;
+      }
+
+      & > textarea {
+        resize: none;
+      }
+
+      & > a {
+        text-align: center;
+        margin-top: 1rem;
+
+        & > button {
+          width: 10rem;
+          height: 2.5rem;
+          font-size: 1.5rem;
+          font-weight: 700;
+          border-radius: 2rem;
+          border: none;
+          box-shadow: 0.5rem 0.4rem 0.4rem rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+
+    .mapouter {
+      margin-top: variables.$marginSectionSmall;
+
+      .gmap_canvas {
+        & > iframe {
+          width: 100%;
+          height: 30rem;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  background-color: variables.$backgroundColorCard;
+  padding: 1rem;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  .fab {
+    font-size: 3rem;
+    cursor: pointer;
+  }
+
+  .fa-facebook-square:hover {
+    color: #3b5998;
+  }
+
+  .fa-instagram-square:hover {
+    color: rgb(141, 79, 89);
+  }
+
+  .fa-twitter-square:hover {
+    color: #00acee;
+  }
+
+  &__info {
+    font-size: 1.8rem;
+  }
+
+  .copyright {
+    font-size: 1.4rem;
   }
 }
