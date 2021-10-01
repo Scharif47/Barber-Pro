@@ -214,7 +214,7 @@ main .contact__form {
   margin-left: auto;
   margin-right: auto;
   background-color: whitesmoke;
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 1rem 0.5rem 2rem 0.5rem;
   box-shadow: 0.6rem 0.6rem 0.8rem rgba(0, 0, 0, 0.6);
 }
 main .contact__form > label {
