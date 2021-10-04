@@ -1,0 +1,6 @@
+1. Sketch the Website
+2. Design the Website
+3. Create files & folders (make npm ready if necessary)
+4. Test env. if everything works as expected (scss, css, etc)
+5. code the html
+6. code sass/css

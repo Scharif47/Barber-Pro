@@ -12,158 +12,188 @@
     <title>Barber Pro</title>
   <script src="/main.07544d9b.js"></script></head>
   <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Hamburger icon -->
+      <div class="menu">
+        <div class="line-1 line"></div>
+        <div class="line-2 line"></div>
+        <div class="line-3 line"></div>
+      </div>
+
+      <!-- Sidebar content -->
+      <div class="menu-content">
+        <div class="menu-content__wrapper">
+          <div>
+            <a href="#features"><h4>Start</h4></a>
+          </div>
+          <div>
+            <a href="#offers"><h4>Angebot</h4></a>
+          </div>
+          <div>
+            <a href="#team"><h4>Unser Team</h4></a>
+          </div>
+          <div>
+            <a href="#contact"><h4>Kontakt</h4></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header>
-      <h1>
+      <h1 id="heading">
         Welcome <br>
         to <br>
         Barber Pro
       </h1>
-      <h2>The Pros in Berlin</h2>
+      <h2 id="heading-sub">The Pros in Berlin</h2>
     </header>
 
-    <main>
-
-      <!-- Our features -->
-      <section class="features">
-        <article class="feature feature__experience">
-          <h3><i class="fas fa-award"></i> Seit 2010</h3>
-          <p>
-            Unsere Mitarbeiter haben jahrelange Erfahrung und sind Experten auf
-            ihrem Gebiet. Wir sind stolz auf unsere Auszeichunungen wie z.B
-            <strong>Young Professionals</strong> oder
-            <strong>Best Barber Berlin</strong>.
-          </p>
-        </article>
-        <article class="feature">
-          <h3><i class="fas fa-fire"></i> Unser Ziel</h3>
-          <p>
-            Unseren Kunden die besten Haarschnitte und Styles zu bieten ist
-            unser Ziel. Ob old-school, modern oder exotisch, die Friseurinnen
-            und Friseure des Barber-Pro's sind in allem geschult.
-          </p>
-        </article>
-      </section>
-
-      <!-- available offers with prices -->
-      <section class="offers">
-        <article class="offer__1">
-          <h4>Herrenhaarschnitt - 39€</h4>
-          <p>Haarschnitt inkl. Waschen, ausspülen, Kopfmassage & Styling</p>
-        </article>
-        <article class="offer__2">
-          <h4>Nacken & Seiten 29€</h4>
-          <p>Trockenschnitt inkl. Übergang an Seiten und Nacken mit Maschine</p>
-        </article>
-        <article class="offer__3">
-          <h4>Bart & Gesicht - 33€</h4>
-          <p>
-            Inkl. Heisse Kompresse, Formschnitt, Konturen-Rasur mit dem Messer &
-            Finishprodukte
-          </p>
-        </article>
-        <article class="offer__4">
-          <h4>Bartschnitt trocken - 23€</h4>
-          <p>Bart Trockenschnitt mit der Maschine & Finishprodukte</p>
-        </article>
-        <article class="offer__5">
-          <h4>Klassische Nassrasur - 36€</h4>
-          <p>
-            Traditionelle Vollrasur in mehreren Durchgängen, mit heißer
-            Kompresse und Pflegeprodukten
-          </p>
-        </article>
-        <article class="offer__6">
-          <h4>Waxing - 10€</h4>
-          <p>
-            Haarentfernung durch Heißwax, für Ohren, Nacken, Nase und andere
-            teile des Gesichts
-          </p>
-        </article>
-        <article class="offer__7">
-          <h4>Jungs-Haarschnitt - 15€</h4>
-          <p>
-            Bis zu 16 Jahren inkl. Konturen-Rasur mit dem Messer &
-            Finishprodukte
-          </p>
-      </article></section>
-
-      <!-- Team -->
-      <section class="team">
-        <article class="person person__1">
-          <figure>
-            <img src="/team1.e1ae0464.jpg" alt="Mitglied des Barber Pro Teams in Hemd, mit langen dunklen Haaren">
-          </figure>
-          <figcaption>
-            <h4>Ali Hamudi</h4>
-            <p>Spezialisiert auf Langhaarfrisuren mit 7+ Jahren Erfahrung. Ali spricht fließend deutsch, englisch & arabisch.</p>
-          </figcaption>
-        </article>
-        <article class="person person__2">
-          <figure>
-            <img src="/team2.d1b06d9c.jpg" alt="Mitglied des Barber Pro Teams in Anzug, mit kurzen dunklen Haaren und getrimmtem Bart">
-          </figure>
-          <figcaption>
-            <h4>Murad Fatih</h4>
-            <p>Der Experte bei Kurzhaarfrisuren mit 10+ Jahren Erfahrung und vielen Preisen ausgezeichnet. Murad spricht fließend deutsch, englisch, arabisch & türkisch.</p>
-          </figcaption>
-        </article>
-        <article class="person person__3">
-          <figure><img src="/team3.b33d63ba.jpg" alt="Mitglied des Barber Pro Teams in casual Outfit, mit kurzen Haaren und Sonnenbrillen"></figure>
-          <figcaption>
-            <h4>Said Mustafa</h4>
-            <p>Allround-Talent Said hat 8+ Jahre Erfahrung in Kurz- und Langhaarfrisuren. Said spricht außerdem fließen deutsch & englisch.</p>
-          </figcaption>
-        </article>
-      </section>
-
-      <!-- review section -->
-      <section class="review">
-        <div class="slide">
-          <!-- radio input elements to bind with label bars if checked -->
-          <input type="radio" name="slide" id="slide-1" checked="">
-          <input type="radio" name="slide" id="slide-2">
-          <input type="radio" name="slide" id="slide-3">
-
-          <article class="review__1 slide-1">
-            <div class="review__header">
-              <i class="review__img"><img src="/review1.94ac04ea.jpg" alt=""></i>
-              <h4>Harun Yizil</h4>
-            </div>
-            <i>⭐⭐⭐⭐⭐</i>
-            <p class="review__date">12/09/2021</p>
-            <p class="review__info">Top Mitarbeiter. Sie haben meinen Haare perfekt geschnitten, werde da ab jetzt immer meine Haare schneiden lasse. Außerdem ist das Personal sehr nett und der Firseursalon sauber und modern.</p>
+    <div class="main-wrapper">
+      <main>
+        <!-- Our features -->
+        <section id="features" class="features">
+          <article class="feature feature__experience">
+            <h3><i class="fas fa-award"></i> Seit 2010</h3>
+            <p>
+              Unsere Mitarbeiter haben jahrelange Erfahrung und sind Experten auf
+              ihrem Gebiet. Wir sind stolz auf unsere Auszeichunungen wie z.B
+              <strong>Young Professionals</strong> oder
+              <strong>Best Barber Berlin</strong>.
+            </p>
           </article>
-          <article class="review__2">
-            <div class="review__header">
-              <i><img src="/review2.6ed8ce74.jpg" alt=""></i>
-              <h4>Jonas S.</h4>
-            </div>
-            <i>⭐⭐⭐⭐⭐</i>
-            <p class="review__date">20/10/2021</p>
-            <p class="review__info">Eines der besten Friseursalons in Berlin. Freundliches Team und das Ambiente ist auch sehr nice.</p>
+          <article class="feature">
+            <h3><i class="fas fa-fire"></i> Unser Ziel</h3>
+            <p>
+              Unseren Kunden die besten Haarschnitte und Styles zu bieten ist
+              unser Ziel. Ob old-school, modern oder exotisch, die Friseurinnen
+              und Friseure des Barber-Pro's sind in allem geschult.
+            </p>
           </article>
-          <article class="review__3">
-            <div class="review__header">
-              <i><img src="/review3.d4d0de67.jpg" alt=""></i>
-              <h4>Salim Ahmed</h4>
-            </div>
-            <i>⭐⭐⭐⭐⭐</i>
-            <p class="review__date">12/11/2021</p>
-            <p class="review__info">Top Mitarbeiter und top Austattung. Gerne wieder.</p>
+        </section>
+  
+        <!-- available offers with prices -->
+        <section id="offers" class="offers">
+          <article class="offer__1">
+            <h4>Herrenhaarschnitt - 39€</h4>
+            <p>Haarschnitt inkl. Waschen, ausspülen, Kopfmassage & Styling</p>
           </article>
-        </div>
-        
-        <!-- slider navigation bars -->
-        <div class="navigation">
-          <label for="slide-1" class="navigation__bar"></label>
-          <label for="slide-2" class="navigation__bar"></label>
-          <label for="slide-3" class="navigation__bar"></label>
-        </div>
-      </section>
-
-      <section class="contact">
-
+          <article class="offer__2">
+            <h4>Nacken & Seiten 29€</h4>
+            <p>Trockenschnitt inkl. Übergang an Seiten und Nacken mit Maschine</p>
+          </article>
+          <article class="offer__3">
+            <h4>Bart & Gesicht - 33€</h4>
+            <p>
+              Inkl. Heisse Kompresse, Formschnitt, Konturen-Rasur mit dem Messer &
+              Finishprodukte
+            </p>
+          </article>
+          <article class="offer__4">
+            <h4>Bartschnitt trocken - 23€</h4>
+            <p>Bart Trockenschnitt mit der Maschine & Finishprodukte</p>
+          </article>
+          <article class="offer__5">
+            <h4>Klassische Nassrasur - 36€</h4>
+            <p>
+              Traditionelle Vollrasur in mehreren Durchgängen, mit heißer
+              Kompresse und Pflegeprodukten
+            </p>
+          </article>
+          <article class="offer__6">
+            <h4>Waxing - 10€</h4>
+            <p>
+              Haarentfernung durch Heißwax, für Ohren, Nacken, Nase und andere
+              teile des Gesichts
+            </p>
+          </article>
+          <article class="offer__7">
+            <h4>Jungs-Haarschnitt - 15€</h4>
+            <p>
+              Bis zu 16 Jahren inkl. Konturen-Rasur mit dem Messer &
+              Finishprodukte
+            </p>
+          </article>
+        </section>
+  
+        <!-- Team -->
+        <section id="team" class="team">
+          <article class="person person__1">
+            <figure>
+              <img src="/team1.e1ae0464.jpg" alt="Mitglied des Barber Pro Teams in Hemd, mit langen dunklen Haaren">
+            </figure>
+            <figcaption>
+              <h4>Ali Hamudi</h4>
+              <p>
+                Spezialisiert auf Langhaarfrisuren mit 7+ Jahren Erfahrung. Ali
+                spricht fließend deutsch, englisch & arabisch.
+              </p>
+            </figcaption>
+          </article>
+          <article class="person person__2">
+            <figure>
+              <img src="/team2.d1b06d9c.jpg" alt="Mitglied des Barber Pro Teams in Anzug, mit kurzen dunklen Haaren und getrimmtem Bart">
+            </figure>
+            <figcaption>
+              <h4>Murad Fatih</h4>
+              <p>
+                Der Experte bei Kurzhaarfrisuren mit 10+ Jahren Erfahrung und
+                vielen Preisen ausgezeichnet. Murad spricht fließend deutsch,
+                englisch, arabisch & türkisch.
+              </p>
+            </figcaption>
+          </article>
+          <article class="person person__3">
+            <figure>
+              <img src="/team3.b33d63ba.jpg" alt="Mitglied des Barber Pro Teams in casual Outfit, mit kurzen Haaren und Sonnenbrillen">
+            </figure>
+            <figcaption>
+              <h4>Said Mustafa</h4>
+              <p>
+                Allround-Talent Said hat 8+ Jahre Erfahrung in Kurz- und
+                Langhaarfrisuren. Said spricht außerdem fließend deutsch &
+                englisch.
+              </p>
+            </figcaption>
+          </article>
+        </section>
+  
+        <!-- gallery section -->
+        <section class="gallery">
+          <div class="slides">
+            <!-- navigation handling -->
+            <input type="radio" name="slide" id="slide-1" checked="">
+            <input type="radio" name="slide" id="slide-2">
+            <input type="radio" name="slide" id="slide-3">
+            <input type="radio" name="slide" id="slide-4">
+            <!-- slides / images -->
+            <div class="slide slide-1">
+              <img src="/slide-1.2fcce7cf.jpg" alt="">
+            </div>
+            <div class="slide slide-2">
+              <img src="/slide-2.3badad8f.jpg" alt="">
+            </div>
+            <div class="slide slide-3">
+              <img src="/slide-3.978bd5dc.jpg" alt="">
+            </div>
+            <div class="slide slide-4">
+              <img src="/slide-4.b09b31d2.jpg" alt="">
+            </div>
+  
+            <!-- navigation style -->
+            <div class="navigation">
+              <label for="slide-1" class="navigation__bar"></label>
+              <label for="slide-2" class="navigation__bar"></label>
+              <label for="slide-3" class="navigation__bar"></label>
+              <label for="slide-4" class="navigation__bar"></label>
+            </div>
+          </div>
+        </section>
+  
+        <!-- contact section -->
+        <section id="contact" class="contact">
           <form class="contact__form" action="">
+            <h3>Schreib uns eine Nachricht</h3>
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
             <label for="email">Email</label>
@@ -174,33 +204,42 @@
               <button value="send">Senden</button>
             </a>
           </form>
+        </section>
+      </main>
+      <!-- google maps / location -->
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=berlin&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no">
+        </iframe>
+        <br>
+        <style>.mapouter {
+            text-align: right;
+          }</style>
+        <a href="https://www.embedgooglemap.net"> </a>
+        <style>.gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+          }</style>
+      </div>
+    </div>
+    </div>
+    
 
-        
-
-        <div class="mapouter">
-          <div class="gmap_canvas">
-            <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=berlin&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no">
-            </iframe>
-            <br>
-            <style>.mapouter{text-align:right;}</style>
-            <a href="https://www.embedgooglemap.net">
-            </a>
-            <style>.gmap_canvas {overflow:hidden;background:none!important;}</style>
-            </div>
-          </div>
-      </section>
-
-    </main>
+    
 
     <footer class="footer">
-      <p class="footer__info footer__item">EMail: barber-pro@gmail.com</p>
+      <p class="footer__info footer__item">E-Mail: barber-pro@gmail.com</p>
       <p class="footer__info footer__item">Tel.: 030 545658</p>
       <div class="socials footer__item">
         <i class="fab fa-facebook-square"></i>
         <i class="fab fa-instagram-square"></i>
         <i class="fab fa-twitter-square"></i>
       </div>
-      <p class="copyright footer__item">&copy;Copyright Barber-Pro. Alle Rechte vorbehalten.</p>
+      <p class="copyright footer__item">
+        &copy;Copyright Barber-Pro. Alle Rechte vorbehalten.
+      </p>
     </footer>
+
+    <script src="/src.e31bb0bc.js"></script>
   </body>
 </html>

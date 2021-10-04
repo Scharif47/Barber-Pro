@@ -4,9 +4,10 @@
 $backgroundColorCard: whitesmoke;
 
 
-////////////////// Mobile Small
+////////////////// Mobile smallest
 // section properties
 $marginSectionSmall: 5rem;
+
 
 // card properties
 $widthCard: 25rem;
@@ -15,3 +16,50 @@ $boxShadowMedium: 0.6rem 0.4rem 0.7rem rgba(0,0,0, 0.7);
 $boxShadowSmall: 0.6rem 0.6rem 0.8rem rgba(0, 0, 0, 0.6);
 
 
+
+////////////////// Mobile small
+
+// fonts etc.
+$fontH1Small: 7.1rem;
+$fontH2Small: 6.2rem;
+$fontH3Small: 3.7rem;
+$fontH4Small: 2.6rem;
+$fontPSmall: 2.5rem;
+$lineHeightSmall: 3.2rem;
+
+// card properties
+$widthCardSmall: 35rem;
+
+
+////////////////// Mobile Medium
+// section properties
+$marginSectionMedium: 10rem;
+
+// fonts etc.
+$fontH1Medium: 14rem;
+$fontH2Medium: 12rem;
+$fontH3Medium: 5rem;
+$fontH4Medium: 4rem;
+$fontPMedium: 3.2rem;
+$lineHeightMedium: 4.5rem;
+
+// card properties
+$widthCardMedium: 65rem;
+$paddingCardMedium: 2rem;
+$boxShadowLarger: 1.4rem 0.9rem 1.6rem rgba(0,0,0, 0.7);
+$boxShadowLarge: 0.8rem 0.7rem 0.9rem rgba(0, 0, 0, 0.6);
+
+
+
+////////////////// Desktop Large
+// section properties
+$marginSectionLarge: 30rem;
+
+// fonts etc.
+$fontH1Large: 18rem;
+$fontH2Large: 16rem;
+
+// card properties
+$widthCardLarge: 100rem;
+$boxShadowLarger: 1.4rem 0.9rem 1.6rem rgba(0,0,0, 0.7);
+$boxShadowLarge: 0.8rem 0.7rem 0.9rem rgba(0, 0, 0, 0.6);

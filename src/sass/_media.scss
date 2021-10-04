@@ -1,0 +1,515 @@
+@use "./variables";
+
+// 350px
+@media screen and (min-width: 350px) {
+  #heading {
+    font-size: variables.$fontH1Small;
+  }
+
+  #heading-sub {
+    font-size: variables.$fontH2Small;
+  }
+
+  .features {
+    .feature {
+      width: variables.$widthCardSmall;
+
+      & > h3 {
+        font-size: variables.$fontH3Small;
+      }
+
+      & > p {
+        font-size: variables.$fontPSmall;
+        line-height: variables.$lineHeightSmall;
+      }
+    }
+  }
+
+  main .offers {
+    width: variables.$widthCardSmall;
+
+    & h4 {
+      font-size: variables.$fontH4Small;
+    }
+
+    & p {
+      font-size: variables.$fontPSmall;
+    }
+  }
+
+  main .team {
+    width: variables.$widthCardSmall;
+
+    & h4 {
+      font-size: variables.$fontH4Small;
+    }
+
+    & p {
+      font-size: variables.$fontPSmall;
+    }
+  }
+
+  main .gallery {
+    width: variables.$widthCardSmall;
+
+    .navigation__bar {
+      width: 6rem;
+      height: 1.2rem;
+    }
+  }
+
+  main .contact {
+    &__form {
+      width: variables.$widthCardSmall;
+
+      & > h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+      }
+
+      & > label {
+        font-size: variables.$fontPSmall;
+      }
+
+      & > input {
+        height: 3.2rem;
+      }
+
+      & > textarea {
+        height: 28rem;
+      }
+
+      & > a > button {
+        width: 15rem;
+        height: 4rem;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .footer {
+    &__item:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &__info {
+      font-size: 2.5rem;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+
+      & .fab {
+        font-size: 6rem;
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+    }
+
+    .copyright {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+// 700px
+@media screen and (min-width: 700px) {
+
+  .sidebar {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    right: 0;
+  
+    .menu {
+      position: absolute;
+      background-color: rgb(170, 141, 67);
+      top: 2rem;
+      right: 10%;
+      cursor: pointer;
+      z-index: 200;
+  
+      & > div {
+        width: 4rem;
+        height: 0.5rem;
+        background-color: black;
+        margin: 0.5rem;
+      }
+  
+      &-toggle {
+        position: absolute;
+        padding: 2rem 1rem 2rem 1rem;
+        top: 3rem;
+        right: 10%;
+        cursor: pointer;
+        z-index: 200;
+  
+        & > div {
+          margin: 0;
+        }
+  
+        & > .line-2 {
+          display: none;
+        }
+        & > .line-1 {
+          transform: rotate(45deg);
+          // transform-origin: center;
+        }
+        & > .line-3 {
+          transform: rotate(-45deg);
+          transform-origin: 35%;
+        }
+      }
+    }
+  }
+
+  #heading {
+    font-size: variables.$fontH1Medium;
+  }
+
+  #heading-sub {
+    font-size: variables.$fontH2Medium;
+  }
+
+  main .features {
+    margin-top: 3rem;
+    .feature {
+      width: variables.$widthCardMedium;
+      padding: variables.$paddingCardMedium;
+      box-shadow: variables.$boxShadowLarger;
+
+      & > h3 {
+        font-size: variables.$fontH3Medium;
+        margin-bottom: 3rem;
+      }
+
+      & > p {
+        font-size: variables.$fontPMedium;
+        line-height: variables.$lineHeightMedium;
+      }
+
+      &__experience {
+        margin-bottom: 6rem;
+      }
+    }
+  }
+
+  main .offers {
+    margin-top: variables.$marginSectionMedium;
+    width: variables.$widthCardMedium;
+    padding: variables.$paddingCardMedium;
+
+    & h4 {
+      font-size: variables.$fontH4Medium;
+    }
+
+    & p {
+      font-size: variables.$fontPMedium;
+    }
+  }
+
+  main .team {
+    margin-top: variables.$marginSectionMedium;
+    width: variables.$widthCardMedium;
+
+    & .person {
+      box-shadow: variables.$boxShadowLarger;
+
+      &:not(:last-child) {
+        margin-bottom: 7rem;
+      }
+
+      & > figcaption {
+        padding: variables.$paddingCardMedium;
+      }
+    }
+
+    & h4 {
+      font-size: variables.$fontH4Medium;
+    }
+
+    & p {
+      font-size: variables.$fontPMedium;
+    }
+  }
+
+  main .gallery {
+    margin-top: variables.$marginSectionMedium;
+    width: variables.$widthCardMedium;
+    height: 45rem;
+
+    .navigation__bar {
+      width: 6rem;
+      height: 1.2rem;
+    }
+  }
+
+  main .contact {
+    margin-top: variables.$marginSectionMedium;
+
+    &__form {
+      width: variables.$widthCardMedium;
+      padding: variables.$paddingCardMedium;
+
+      & > h3 {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 3.5rem;
+      }
+
+      & > label {
+        font-size: variables.$fontPMedium;
+      }
+
+      & > input {
+        height: 5rem;
+      }
+
+      & > textarea {
+        height: 45rem;
+      }
+
+      & > a > button {
+        width: 25rem;
+        height: 6rem;
+        font-size: 4rem;
+        box-shadow: variables.$boxShadowLarge;
+      }
+    }
+
+    .mapouter {
+      margin-top: variables.$marginSectionMedium;
+
+      .gmap_canvas {
+        & > iframe {
+          width: 100%;
+          height: 50rem;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__item:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    &__info {
+      font-size: 4.5rem;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+
+      & .fab {
+        font-size: 9rem;
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+    }
+
+    .copyright {
+      font-size: 3rem;
+    }
+  }
+}
+
+// 1350px
+@media screen and (min-width: 1500px) {
+  #heading {
+    font-size: variables.$fontH1Large;
+    letter-spacing: 0.8rem;
+  }
+
+  #heading-sub {
+    font-size: variables.$fontH2Large;
+  }
+
+  .main-wrapper {
+    background: linear-gradient(
+      315deg,
+      rgba(0, 0, 0, 0.692),
+      rgba(71, 58, 58, 0.2)
+    ),
+    url(../../dist/images/tools/header.jpg) center;
+  background-image: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 5rem;
+  }
+
+  main {
+    width: 140rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 8rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+    background-color: beige;
+    border-radius: 2rem;
+  }
+
+  main .features {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .feature {
+      width: variables.$widthCardMedium;
+      padding: variables.$paddingCardMedium;
+      box-shadow: variables.$boxShadowLarger;
+      margin: 0;
+
+      & > h3 {
+        font-size: variables.$fontH3Medium;
+        margin-bottom: 3rem;
+      }
+
+      & > p {
+        font-size: variables.$fontPMedium;
+        line-height: variables.$lineHeightMedium;
+      }
+
+      &__experience {
+        margin-bottom: 0;
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  main .offers {
+    margin-top: variables.$marginSectionLarge;
+    width: variables.$widthCardLarge;
+    padding: variables.$paddingCardMedium;
+
+    & h4 {
+      font-size: variables.$fontH4Medium;
+    }
+
+    & p {
+      font-size: variables.$fontPMedium;
+    }
+  }
+
+  main .team {
+    margin-top: variables.$marginSectionLarge;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+
+    & .person {
+      box-shadow: variables.$boxShadowLarger;
+      width: 40rem;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 3rem;
+      }
+
+      & > figcaption {
+        padding: variables.$paddingCardMedium;
+      }
+    }
+
+    & h4 {
+      font-size: variables.$fontH4Medium;
+    }
+
+    & p {
+      font-size: variables.$fontPMedium;
+    }
+  }
+
+  main .gallery {
+    margin-top: variables.$marginSectionLarge;
+    width: variables.$widthCardLarge;
+    height: 60rem;
+
+    .navigation__bar {
+      width: 6rem;
+      height: 1.2rem;
+    }
+  }
+
+  main .contact {
+    margin-top: variables.$marginSectionLarge;
+
+    &__form {
+      width: variables.$widthCardLarge;
+      padding: variables.$paddingCardMedium;
+
+      & > h3 {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 4rem;
+      }
+
+      & > label {
+        font-size: variables.$fontPMedium;
+      }
+
+      & > input {
+        height: 5rem;
+      }
+
+      & > textarea {
+        height: 45rem;
+      }
+
+      & > a > button {
+        width: 25rem;
+        height: 6rem;
+        font-size: 4rem;
+        box-shadow: variables.$boxShadowLarge;
+      }
+    }
+  }
+
+  .mapouter {
+    margin-bottom: 5rem;
+  
+    .gmap_canvas {
+      & > iframe {
+        width: 100%;
+        height: 60rem;
+      }
+    }
+  }
+
+  .footer {
+    padding: variables.$paddingCardMedium;
+
+    &__item:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    &__info {
+      font-size: 4rem;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+
+      & .fab {
+        font-size: 8rem;
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+    }
+
+    .copyright {
+      font-size: 2.5rem;
+    }
+  }
+}
