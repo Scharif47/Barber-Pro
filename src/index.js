@@ -1,12 +1,4 @@
-const menu = document.querySelector(".menu");
-const menuContent = document.querySelector(".menu-content");
 
-
-const menuToggle = (e) => {
-  menu.addEventListener("click", () => {
-    menu.classList.toggle("menu-toggle");
-    menuContent.classList.toggle("menu-content-toggle");
-  });
-};
-
-menuToggle();
+document.querySelector(".sidebar-menu").addEventListener("click", () => {
+  document.querySelector(".container").classList.toggle("toggle");
+});

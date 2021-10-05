@@ -1,90 +1,119 @@
 @use "./variables";
 
+.sidebar-menu {
+  width: 4rem;
+  height: 3rem;
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgb(173, 144, 80);
+  padding: 0.2rem;
+  cursor: pointer;
+  transition: right 0.4s;
+
+  &__line {
+    width: 100%;
+    height: 0.3rem;
+    background-color: black;
+    box-shadow: 0.2rem 0.3rem 0.6rem rgba(0,0,0, 0.3);
+  }
+
+  .toggle &__line {
+    margin-left: 0.4rem;
+  }
+
+  .toggle &__line-1 {
+    transform: rotate(50deg) translate(0.3rem, 0.8rem);
+  }
+
+  .toggle &__line-2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .toggle &__line-3 {
+    transform: rotate(-50deg) translate(0.3rem, -0.8rem);
+  }
+}
+
+.toggle .sidebar-menu {
+  right: 5rem;
+}
 
 .sidebar {
-  position: sticky;
-  z-index: 100;
+  width: 20rem;
+  height: 100vh;
+  position: fixed;
   top: 0;
+  right: -25rem;
+  background-color: beige;
+  transition: right 0.3s;
+  z-index: 900;
+  box-shadow: -0.8rem 1rem 1rem rgba(0, 0, 0, 0.7);
+}
+
+.toggle .sidebar {
   right: 0;
+}
 
-  .menu {
-    position: absolute;
-    background-color: rgb(170, 141, 67);
-    top: 2rem;
-    right: 10%;
-    cursor: pointer;
-    z-index: 200;
+.menu {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
 
-    & > div {
-      width: 4rem;
-      height: 0.5rem;
-      background-color: black;
-      margin: 0.5rem;
-    }
+  &__item {
+    text-align: center;
 
-    &-toggle {
-      position: absolute;
-      padding: 2rem 1rem 2rem 1rem;
-      top: 3rem;
-      right: 10%;
-      cursor: pointer;
-      z-index: 200;
-
-      & > div {
-        margin: 0;
-      }
-
-      & > .line-2 {
-        display: none;
-      }
-      & > .line-1 {
-        transform: rotate(45deg);
-        // transform-origin: center;
-      }
-      & > .line-3 {
-        transform: rotate(-45deg);
-        transform-origin: 35%;
-      }
+    &:not(:last-child) {
+      margin-bottom: 3rem;
     }
   }
 
-  .menu-content {
-    position: absolute;
-    right: -200%;
-    width: 100%;
-    height: 100vh;
-    background-color: beige;
-    display: none;
-    overflow-y: hidden;
+  & h4 {
+    font-size: 2.2rem;
+  }
+}
 
-    &__wrapper {
-      display: flex;
-      margin-top: 20rem;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+.social-media {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  & i {
+    font-size: 2.2rem;
+    margin: 1rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #777;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+
+  .fa{
+    &-facebook:hover {
+      background-color: rgba(10, 10, 187, 0.822);
     }
-
-    & a {
-      cursor: pointer;
+    &-instagram:hover {
+      background-color: rgb(177, 74, 91);
     }
-
-    & div {
-      &:not(:last-child) {
-        margin-bottom: 4rem;
-      }
-    }
-
-    & h4 {
-      font-size: 3rem;
-    }
-
-    &-toggle {
-      right: 0;
-      display: block;
+    &-twitter:hover {
+      background-color: rgb(40, 111, 243)
     }
   }
 }
+
 
 header {
   width: 100%;
@@ -149,6 +178,12 @@ main {
     box-shadow: variables.$boxShadowMedium;
     border-radius: 1rem;
 
+    & > h3 {
+      text-align: center;
+      margin-bottom: variables.$fontSizeSectionHeading;
+      text-shadow: variables.$textShadowSectionHeading;
+    }
+
     & > article:not(:last-child) {
       margin-bottom: 2.5rem;
       padding-bottom: 1rem;
@@ -167,6 +202,13 @@ main {
     width: variables.$widthCard;
     margin-left: auto;
     margin-right: auto;
+
+    & > h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: variables.$fontSizeSectionHeading;
+      text-shadow: variables.$textShadowSectionHeading;
+    }
 
     .person {
       background-color: variables.$backgroundColorCard;

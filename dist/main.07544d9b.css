@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -43,75 +47,106 @@ p {
   font-size: 1.7rem;
 }
 
+.sidebar-menu {
+  width: 4rem;
+  height: 3rem;
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #ad9050;
+  padding: 0.2rem;
+  cursor: pointer;
+  transition: right 0.4s;
+}
+.sidebar-menu__line {
+  width: 100%;
+  height: 0.3rem;
+  background-color: black;
+  box-shadow: 0.2rem 0.3rem 0.6rem rgba(0, 0, 0, 0.3);
+}
+.toggle .sidebar-menu__line {
+  margin-left: 0.4rem;
+}
+.toggle .sidebar-menu__line-1 {
+  transform: rotate(50deg) translate(0.3rem, 0.8rem);
+}
+.toggle .sidebar-menu__line-2 {
+  opacity: 0;
+  visibility: hidden;
+}
+.toggle .sidebar-menu__line-3 {
+  transform: rotate(-50deg) translate(0.3rem, -0.8rem);
+}
+
+.toggle .sidebar-menu {
+  right: 5rem;
+}
+
 .sidebar {
-  position: sticky;
-  z-index: 100;
+  width: 20rem;
+  height: 100vh;
+  position: fixed;
   top: 0;
+  right: -25rem;
+  background-color: beige;
+  transition: right 0.3s;
+  z-index: 900;
+  box-shadow: -0.8rem 1rem 1rem rgba(0, 0, 0, 0.7);
+}
+
+.toggle .sidebar {
   right: 0;
 }
-.sidebar .menu {
+
+.menu {
   position: absolute;
-  background-color: #aa8d43;
-  top: 2rem;
-  right: 10%;
-  cursor: pointer;
-  z-index: 200;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
 }
-.sidebar .menu > div {
-  width: 4rem;
-  height: 0.5rem;
-  background-color: black;
-  margin: 0.5rem;
+.menu__item {
+  text-align: center;
 }
-.sidebar .menu-toggle {
+.menu__item:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.menu h4 {
+  font-size: 2.2rem;
+}
+
+.social-media {
   position: absolute;
-  padding: 2rem 1rem 2rem 1rem;
-  top: 3rem;
-  right: 10%;
-  cursor: pointer;
-  z-index: 200;
-}
-.sidebar .menu-toggle > div {
-  margin: 0;
-}
-.sidebar .menu-toggle > .line-2 {
-  display: none;
-}
-.sidebar .menu-toggle > .line-1 {
-  transform: rotate(45deg);
-}
-.sidebar .menu-toggle > .line-3 {
-  transform: rotate(-45deg);
-  transform-origin: 35%;
-}
-.sidebar .menu-content {
-  position: absolute;
-  right: -200%;
+  bottom: 3rem;
   width: 100%;
-  height: 100vh;
-  background-color: beige;
-  display: none;
-  overflow-y: hidden;
-}
-.sidebar .menu-content__wrapper {
   display: flex;
-  margin-top: 20rem;
-  flex-direction: column;
+  justify-content: center;
+}
+.social-media i {
+  font-size: 2.2rem;
+  margin: 1rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #777;
+  color: #fff;
+  display: flex;
   justify-content: center;
   align-items: center;
-}
-.sidebar .menu-content a {
+  border-radius: 50%;
+  transition: background-color 0.3s;
   cursor: pointer;
 }
-.sidebar .menu-content div:not(:last-child) {
-  margin-bottom: 4rem;
+.social-media .fa-facebook:hover {
+  background-color: rgba(10, 10, 187, 0.822);
 }
-.sidebar .menu-content h4 {
-  font-size: 3rem;
+.social-media .fa-instagram:hover {
+  background-color: #b14a5b;
 }
-.sidebar .menu-content-toggle {
-  right: 0;
-  display: block;
+.social-media .fa-twitter:hover {
+  background-color: #286ff3;
 }
 
 header {
@@ -165,6 +200,11 @@ main .offers {
   box-shadow: 0.6rem 0.4rem 0.7rem rgba(0, 0, 0, 0.7);
   border-radius: 1rem;
 }
+main .offers > h3 {
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 0.6rem 0.8rem 0.8rem rgba(0, 0, 0, 0.4);
+}
 main .offers > article:not(:last-child) {
   margin-bottom: 2.5rem;
   padding-bottom: 1rem;
@@ -178,6 +218,12 @@ main .team {
   width: 25rem;
   margin-left: auto;
   margin-right: auto;
+}
+main .team > h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  text-shadow: 0.6rem 0.8rem 0.8rem rgba(0, 0, 0, 0.4);
 }
 main .team .person {
   background-color: whitesmoke;
@@ -345,6 +391,21 @@ main .contact__form > a > button:active {
 }
 
 @media screen and (min-width: 350px) {
+  .sidebar {
+    width: 30rem;
+    right: -35rem;
+  }
+
+  .menu {
+    left: 50%;
+  }
+  .menu__item:not(:last-child) {
+    margin-bottom: 3.5rem;
+  }
+  .menu h4 {
+    font-size: 2.7rem;
+  }
+
   #heading {
     font-size: 7.1rem;
   }
@@ -367,6 +428,10 @@ main .contact__form > a > button:active {
   main .offers {
     width: 35rem;
   }
+  main .offers > h3 {
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+  }
   main .offers h4 {
     font-size: 2.6rem;
   }
@@ -376,6 +441,10 @@ main .contact__form > a > button:active {
 
   main .team {
     width: 35rem;
+  }
+  main .team > h3 {
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
   }
   main .team h4 {
     font-size: 2.6rem;
@@ -396,7 +465,6 @@ main .contact__form > a > button:active {
     width: 35rem;
   }
   main .contact__form > h3 {
-    text-align: center;
     margin-bottom: 2rem;
     font-size: 2.5rem;
   }
@@ -436,46 +504,46 @@ main .contact__form > a > button:active {
   }
 }
 @media screen and (min-width: 700px) {
+  .sidebar-menu {
+    width: 8rem;
+    height: 6rem;
+  }
+  .sidebar-menu__line {
+    height: 0.4rem;
+  }
+  .toggle .sidebar-menu__line-1 {
+    transform: rotate(50deg) translate(1rem, 1.2rem);
+  }
+  .toggle .sidebar-menu__line-3 {
+    transform: rotate(-50deg) translate(1rem, -1.2rem);
+  }
+
   .sidebar {
-    position: sticky;
-    z-index: 100;
-    top: 0;
-    right: 0;
+    width: 55rem;
+    right: -60rem;
   }
-  .sidebar .menu {
-    position: absolute;
-    background-color: #aa8d43;
-    top: 2rem;
-    right: 10%;
-    cursor: pointer;
-    z-index: 200;
+
+  .menu {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  .sidebar .menu > div {
-    width: 4rem;
-    height: 0.5rem;
-    background-color: black;
-    margin: 0.5rem;
+  .menu__item:not(:last-child) {
+    margin-bottom: 5rem;
   }
-  .sidebar .menu-toggle {
-    position: absolute;
-    padding: 2rem 1rem 2rem 1rem;
-    top: 3rem;
-    right: 10%;
-    cursor: pointer;
-    z-index: 200;
+  .menu h4 {
+    font-size: 4rem;
   }
-  .sidebar .menu-toggle > div {
-    margin: 0;
+
+  .social-media {
+    bottom: 3rem;
+    width: 100%;
   }
-  .sidebar .menu-toggle > .line-2 {
-    display: none;
-  }
-  .sidebar .menu-toggle > .line-1 {
-    transform: rotate(45deg);
-  }
-  .sidebar .menu-toggle > .line-3 {
-    transform: rotate(-45deg);
-    transform-origin: 35%;
+  .social-media i {
+    font-size: 4rem;
+    margin: 3rem;
+    width: 7rem;
+    height: 7rem;
   }
 
   #heading {
@@ -511,6 +579,10 @@ main .contact__form > a > button:active {
     width: 65rem;
     padding: 2rem;
   }
+  main .offers > h3 {
+    margin-bottom: 3rem;
+    font-size: 5.5rem;
+  }
   main .offers h4 {
     font-size: 4rem;
   }
@@ -521,6 +593,10 @@ main .contact__form > a > button:active {
   main .team {
     margin-top: 10rem;
     width: 65rem;
+  }
+  main .team > h3 {
+    margin-bottom: 4.5rem;
+    font-size: 5.5rem;
   }
   main .team .person {
     box-shadow: 1.4rem 0.9rem 1.6rem rgba(0, 0, 0, 0.7);
@@ -625,10 +701,11 @@ main .contact__form > a > button:active {
     width: 140rem;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 8rem;
+    padding-bottom: 18rem;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
-    background-color: beige;
     border-radius: 2rem;
+    background-color: #e3e3e3;
+    background-image: url(/brushed-alum-dark.ee3a1bf3.png);
   }
 
   main .features {
@@ -674,6 +751,11 @@ main .contact__form > a > button:active {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
+    position: relative;
+  }
+  main .team > h3 {
+    position: absolute;
+    top: -10rem;
   }
   main .team .person {
     box-shadow: 1.4rem 0.9rem 1.6rem rgba(0, 0, 0, 0.7);
@@ -732,7 +814,7 @@ main .contact__form > a > button:active {
   }
 
   .mapouter {
-    margin-bottom: 5rem;
+    margin-top: 15rem;
   }
   .mapouter .gmap_canvas > iframe {
     width: 100%;
@@ -741,6 +823,8 @@ main .contact__form > a > button:active {
 
   .footer {
     padding: 2rem;
+    background: url(/background.3e5b5313.svg);
+    background-repeat: no-repeat;
   }
   .footer__item:not(:last-child) {
     margin-bottom: 3rem;

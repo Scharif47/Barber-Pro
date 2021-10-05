@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Lato:wght@300;400;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="../dist/images/wallpapers/logo.svg"
     <script
       src="https://kit.fontawesome.com/5bb93003c2.js"
       crossorigin="anonymous"
@@ -18,32 +19,46 @@
     <title>Barber Pro</title>
   </head>
   <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Hamburger icon -->
-      <div class="menu">
-        <div class="line-1 line"></div>
-        <div class="line-2 line"></div>
-        <div class="line-3 line"></div>
+
+    <!-- Sidebar container -->
+    <div class="container">
+      <!-- Sidebar icon -->
+      <div class="sidebar-menu">
+        <div class="sidebar-menu__line sidebar-menu__line-1"></div>
+        <div class="sidebar-menu__line sidebar-menu__line-2"></div>
+        <div class="sidebar-menu__line sidebar-menu__line-3"></div>
       </div>
 
-      <!-- Sidebar content -->
-      <div class="menu-content">
-        <div class="menu-content__wrapper">
-          <div>
-            <a href="#features"><h4>Start</h4></a>
-          </div>
-          <div>
-            <a href="#offers"><h4>Angebot</h4></a>
-          </div>
-          <div>
-            <a href="#team"><h4>Unser Team</h4></a>
-          </div>
-          <div>
-            <a href="#contact"><h4>Kontakt</h4></a>
-          </div>
+      <!-- Sidebar section -->
+      <section class="sidebar">
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="#features" class="menu__link">
+              <h4>Start</h4>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#offers" class="menu__link">
+              <h4>Angebote</h4>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#team" class="menu__link">
+              <h4>Unser Team</h4>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#contact" class="menu__link">
+              <h4>Kontakt</h4>
+            </a>
+          </li>
+        </ul>
+        <div class="social-media">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-twitter"></i>
         </div>
-      </div>
+      </section>
     </div>
 
     <header>
@@ -62,8 +77,9 @@
           <article class="feature feature__experience">
             <h3><i class="fas fa-award"></i> Seit 2010</h3>
             <p>
-              Unsere Mitarbeiter haben jahrelange Erfahrung und sind Experten auf
-              ihrem Gebiet. Wir sind stolz auf unsere Auszeichunungen wie z.B
+              Unsere Mitarbeiter haben jahrelange Erfahrung und sind Experten
+              auf ihrem Gebiet. Wir sind stolz auf unsere Auszeichunungen wie
+              z.B
               <strong>Young Professionals</strong> oder
               <strong>Best Barber Berlin</strong>.
             </p>
@@ -77,22 +93,25 @@
             </p>
           </article>
         </section>
-  
+
         <!-- available offers with prices -->
         <section id="offers" class="offers">
+          <h3 class="section-heading">Unser Angebot</h3>
           <article class="offer__1">
             <h4>Herrenhaarschnitt - 39€</h4>
             <p>Haarschnitt inkl. Waschen, ausspülen, Kopfmassage & Styling</p>
           </article>
           <article class="offer__2">
             <h4>Nacken & Seiten 29€</h4>
-            <p>Trockenschnitt inkl. Übergang an Seiten und Nacken mit Maschine</p>
+            <p>
+              Trockenschnitt inkl. Übergang an Seiten und Nacken mit Maschine
+            </p>
           </article>
           <article class="offer__3">
             <h4>Bart & Gesicht - 33€</h4>
             <p>
-              Inkl. Heisse Kompresse, Formschnitt, Konturen-Rasur mit dem Messer &
-              Finishprodukte
+              Inkl. Heisse Kompresse, Formschnitt, Konturen-Rasur mit dem Messer
+              & Finishprodukte
             </p>
           </article>
           <article class="offer__4">
@@ -121,9 +140,11 @@
             </p>
           </article>
         </section>
-  
+
         <!-- Team -->
+        
         <section id="team" class="team">
+          <h3 class="section-heading">Das Team</h3>
           <article class="person person__1">
             <figure>
               <img
@@ -172,7 +193,7 @@
             </figcaption>
           </article>
         </section>
-  
+
         <!-- gallery section -->
         <section class="gallery">
           <div class="slides">
@@ -194,7 +215,7 @@
             <div class="slide slide-4">
               <img src="../dist/images/barbers/slide-4.jpg" alt="" />
             </div>
-  
+
             <!-- navigation style -->
             <div class="navigation">
               <label for="slide-1" class="navigation__bar"></label>
@@ -204,7 +225,7 @@
             </div>
           </div>
         </section>
-  
+
         <!-- contact section -->
         <section id="contact" class="contact">
           <form class="contact__form" action="">
@@ -214,7 +235,12 @@
             <label for="email">Email</label>
             <input type="email" />
             <label for="message">Nachricht</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
             <a href="#">
               <button value="send">Senden</button>
             </a>
@@ -222,34 +248,31 @@
         </section>
       </main>
       <!-- google maps / location -->
-    <div class="mapouter">
-      <div class="gmap_canvas">
-        <iframe
-          id="gmap_canvas"
-          src="https://maps.google.com/maps?q=berlin&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          frameborder="0"
-          scrolling="no"
-        >
-        </iframe>
-        <br />
-        <style>
-          .mapouter {
-            text-align: right;
-          }
-        </style>
-        <a href="https://www.embedgooglemap.net"> </a>
-        <style>
-          .gmap_canvas {
-            overflow: hidden;
-            background: none !important;
-          }
-        </style>
+      <div class="mapouter">
+        <div class="gmap_canvas">
+          <iframe
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=berlin&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+          >
+          </iframe>
+          <br />
+          <style>
+            .mapouter {
+              text-align: right;
+            }
+          </style>
+          <a href="https://www.embedgooglemap.net"> </a>
+          <style>
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+            }
+          </style>
+        </div>
       </div>
     </div>
-    </div>
-    
-
-    
 
     <footer class="footer">
       <p class="footer__info footer__item">E-Mail: barber-pro@gmail.com</p>
